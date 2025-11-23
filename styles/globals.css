@@ -1,0 +1,34 @@
+/* Basic reset and fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+:root{
+  --container: 1100px;
+  --accent: #0f766e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter, Poppins, sans-serif;line-height:1.5;color:#111}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.site-header{background:white;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+.header-container{display:flex;align-items:center;justify-content:space-between;padding:1rem}
+.logo img{height:48px}
+nav ul{display:flex;gap:1rem;list-style:none}
+.mobile-menu-toggle{display:none;background:none;border:0;font-size:1.2rem}
+.hero{padding:4rem 0;background:linear-gradient(180deg, #f8fafc, white)}
+.hero h1{font-size:2rem;margin-bottom:.5rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+.btn-outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.cards-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{padding:1rem;background:white;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.properties-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:1rem}
+.property-card{background:white;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.property-content{padding:1rem}
+footer{background:#0b1320;color:white;padding:2rem 0;margin-top:2rem}
+.footer-content{display:flex;gap:2rem;flex-wrap:wrap}
+.footer-column{flex:1;min-width:220px}
+.footer-bottom{text-align:center;margin-top:1rem}
+
+/* Responsive */
+@media(max-width:800px){
+  nav ul{display:none}
+  .mobile-menu-toggle{display:block}
+  nav.open ul{display:flex;flex-direction:column;gap:.5rem}
+}
